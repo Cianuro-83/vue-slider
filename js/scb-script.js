@@ -45,23 +45,36 @@ createApp({
         },
         console.log(this.fotoSlides),
       ],
-    };
-    methods: {
-      scorriVersoSn() {
-        console.log(fotoElements[indiceFotoAttuale]);
-        fotoElements[indiceFotoAttuale].classList.remove("selected");
-      
-        if (indiceFotoAttuale > 0) {
-          indiceFotoAttuale--;
-        } else {
-          indiceFotoAttuale = fotoElements.length - 1;
-        }
-      
-        console.log(fotoElements[indiceFotoAttuale]);
-        fotoElements[indiceFotoAttuale].classList.add("selected");
-      }
-      
+     
     }
+  },
+  methods: {
+    scorriVersoSn() {
+      console.log(fotoElements[indiceFotoAttuale]);
+      fotoElements[indiceFotoAttuale].classList.remove("selected");
+
+      if (indiceFotoAttuale > 0) {
+        indiceFotoAttuale--;
+      } else {
+        indiceFotoAttuale = fotoElements.length - 1;
+      }
+
+      console.log(fotoElements[indiceFotoAttuale]);
+      fotoElements[indiceFotoAttuale].classList.add("selected");
+    },
+    scorriVersoDx(this.lastIndex) {
+      console.log(fotoElements[indiceFotoAttuale]);
+      fotoElements[indiceFotoAttuale].classList.remove("selected");
+
+      if (indiceFotoAttuale < lastIndex) {
+        indiceFotoAttuale += 1;
+      } else {
+        indiceFotoAttuale = 0;
+      }
+
+      console.log(fotoElements[indiceFotoAttuale]);
+      fotoElements[indiceFotoAttuale].classList.add("selected");
+    },
   },
 }).mount("#app");
 //---------------------------------------------------------------------------
@@ -72,19 +85,19 @@ createApp({
 // INIZIALIZZO LE FUNZIONI: SCORRI VERSO DESTRA
 //---------------------------------------------------------------------------
 
-// function scorriVersoDx(lastIndex) {
-//   console.log(fotoElements[indiceFotoAttuale]);
-//   fotoElements[indiceFotoAttuale].classList.remove("selected");
+function scorriVersoDx(lastIndex) {
+  console.log(fotoElements[indiceFotoAttuale]);
+  fotoElements[indiceFotoAttuale].classList.remove("selected");
 
-//   if (indiceFotoAttuale < lastIndex) {
-//     indiceFotoAttuale += 1;
-//   } else {
-//     indiceFotoAttuale = 0;
-//   }
+  if (indiceFotoAttuale < lastIndex) {
+    indiceFotoAttuale += 1;
+  } else {
+    indiceFotoAttuale = 0;
+  }
 
-//   console.log(fotoElements[indiceFotoAttuale]);
-//   fotoElements[indiceFotoAttuale].classList.add("selected");
-// }
+  console.log(fotoElements[indiceFotoAttuale]);
+  fotoElements[indiceFotoAttuale].classList.add("selected");
+}
 
 //---------------------------------------------------------------------------
 // INIZIALIZZO LE FUNZIONI: SCORRI VERSO SINISTRA
