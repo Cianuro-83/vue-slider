@@ -43,9 +43,25 @@ createApp({
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eligendi repellendus, quos aliquam dolore placeat",
           img: "./img/img5.jpg",
         },
+        console.log(this.fotoSlides),
       ],
-      console.log([fotoSlides]),
     };
+    methods: {
+      scorriVersoSn() {
+        console.log(fotoElements[indiceFotoAttuale]);
+        fotoElements[indiceFotoAttuale].classList.remove("selected");
+      
+        if (indiceFotoAttuale > 0) {
+          indiceFotoAttuale--;
+        } else {
+          indiceFotoAttuale = fotoElements.length - 1;
+        }
+      
+        console.log(fotoElements[indiceFotoAttuale]);
+        fotoElements[indiceFotoAttuale].classList.add("selected");
+      }
+      
+    }
   },
 }).mount("#app");
 //---------------------------------------------------------------------------
@@ -74,18 +90,18 @@ createApp({
 // INIZIALIZZO LE FUNZIONI: SCORRI VERSO SINISTRA
 //---------------------------------------------------------------------------
 
-// scorriVersoSn();
+scorriVersoSn();
 
-// function scorriVersoSn() {
-//   console.log(fotoElements[indiceFotoAttuale]);
-//   fotoElements[indiceFotoAttuale].classList.remove("selected");
+function scorriVersoSn() {
+  console.log(fotoElements[indiceFotoAttuale]);
+  fotoElements[indiceFotoAttuale].classList.remove("selected");
 
-//   if (indiceFotoAttuale > 0) {
-//     indiceFotoAttuale--;
-//   } else {
-//     indiceFotoAttuale = fotoElements.length - 1;
-//   }
+  if (indiceFotoAttuale > 0) {
+    indiceFotoAttuale--;
+  } else {
+    indiceFotoAttuale = fotoElements.length - 1;
+  }
 
-//   console.log(fotoElements[indiceFotoAttuale]);
-//   fotoElements[indiceFotoAttuale].classList.add("selected");
-// }
+  console.log(fotoElements[indiceFotoAttuale]);
+  fotoElements[indiceFotoAttuale].classList.add("selected");
+}
