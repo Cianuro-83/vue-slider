@@ -24,8 +24,12 @@
             <h1 class="text-center text-warning text-uppercase mb-5">{{ pageTitle }}</h1>
             <div class="container">
                 <div id="carosello" class="carosello">
+                    <div v-for="foto in fotoSlides">
+                        <img src="{{ foto.img }}" alt=" ">
+                        <h2 class="scb-descrizione"> {{ foto.titolo }}</h2>
+                        <p class="scb-descrizione">{{foto.descrizione}}</p>
 
-
+                    </div>
 
                     <div id="freccia-sn" class="freccia-carosello freccia-sn">
                         <i class="fa-solid fa-chevron-left"></i>

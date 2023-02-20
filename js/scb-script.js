@@ -1,7 +1,4 @@
 console.log("Ciao Cianuro... Oggi l'esercizio è VUE SLIDER");
-//********************
-// CREO OGGETTO ARRAY DI FOTO
-//******************** */
 
 //---------------------------------------------------------------------------
 // |||||||||||||||||||||||||||| VUE ||||||||||||||||||||||||||||
@@ -43,10 +40,8 @@ createApp({
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eligendi repellendus, quos aliquam dolore placeat",
           img: "./img/img5.jpg",
         },
-        console.log(this.fotoSlides),
       ],
-     
-    }
+    };
   },
   methods: {
     scorriVersoSn() {
@@ -62,7 +57,7 @@ createApp({
       console.log(fotoElements[indiceFotoAttuale]);
       fotoElements[indiceFotoAttuale].classList.add("selected");
     },
-    scorriVersoDx(this.lastIndex) {
+    scorriVersoDx() {
       console.log(fotoElements[indiceFotoAttuale]);
       fotoElements[indiceFotoAttuale].classList.remove("selected");
 
@@ -77,6 +72,12 @@ createApp({
     },
   },
 }).mount("#app");
+// ---------------------------------------------------------------------------
+// |||||||||||||||||||||||||||| VUE ||||||||||||||||||||||||||||
+//---------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------
+// |||||||||||||||||||||||||||| VUE ||||||||||||||||||||||||||||
 //---------------------------------------------------------------------------
 // |||||||||||||||||||||||||||| VUE ||||||||||||||||||||||||||||
 //---------------------------------------------------------------------------
@@ -85,36 +86,36 @@ createApp({
 // INIZIALIZZO LE FUNZIONI: SCORRI VERSO DESTRA
 //---------------------------------------------------------------------------
 
-function scorriVersoDx(lastIndex) {
-  console.log(fotoElements[indiceFotoAttuale]);
-  fotoElements[indiceFotoAttuale].classList.remove("selected");
+// function scorriVersoDx(lastIndex) {
+//   console.log(fotoElements[indiceFotoAttuale]);
+//   fotoElements[indiceFotoAttuale].classList.remove("selected");
 
-  if (indiceFotoAttuale < lastIndex) {
-    indiceFotoAttuale += 1;
-  } else {
-    indiceFotoAttuale = 0;
-  }
+//   if (indiceFotoAttuale < lastIndex) {
+//     indiceFotoAttuale += 1;
+//   } else {
+//     indiceFotoAttuale = 0;
+//   }
 
-  console.log(fotoElements[indiceFotoAttuale]);
-  fotoElements[indiceFotoAttuale].classList.add("selected");
-}
+//   console.log(fotoElements[indiceFotoAttuale]);
+//   fotoElements[indiceFotoAttuale].classList.add("selected");
+// }
 
 //---------------------------------------------------------------------------
 // INIZIALIZZO LE FUNZIONI: SCORRI VERSO SINISTRA
 //---------------------------------------------------------------------------
 
-scorriVersoSn();
+// scorriVersoSn();
 
-function scorriVersoSn() {
-  console.log(fotoElements[indiceFotoAttuale]);
-  fotoElements[indiceFotoAttuale].classList.remove("selected");
+// function scorriVersoSn() {
+//   // console.log(fotoElements[indiceFotoAttuale]);
+//   fotoElements[indiceFotoAttuale].classList.remove("selected");
 
-  if (indiceFotoAttuale > 0) {
-    indiceFotoAttuale--;
-  } else {
-    indiceFotoAttuale = fotoElements.length - 1;
-  }
+//   if (indiceFotoAttuale > 0) {
+//     indiceFotoAttuale--;
+//   } else {
+//     indiceFotoAttuale = fotoElements.length - 1;
+//   }
 
-  console.log(fotoElements[indiceFotoAttuale]);
-  fotoElements[indiceFotoAttuale].classList.add("selected");
-}
+//   console.log(fotoElements[indiceFotoAttuale]);
+//   fotoElements[indiceFotoAttuale].classList.add("selected");
+// }
