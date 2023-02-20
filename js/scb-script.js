@@ -41,6 +41,9 @@ createApp({
           img: "./img/img5.jpg",
         },
       ],
+      imgClass: "[img.selected]",
+      imgDescription: "descrizione scb-descrizione",
+      relative: "carosello",
     };
   },
   methods: {
@@ -75,47 +78,3 @@ createApp({
 // ---------------------------------------------------------------------------
 // |||||||||||||||||||||||||||| VUE ||||||||||||||||||||||||||||
 //---------------------------------------------------------------------------
-
-//---------------------------------------------------------------------------
-// |||||||||||||||||||||||||||| VUE ||||||||||||||||||||||||||||
-//---------------------------------------------------------------------------
-// |||||||||||||||||||||||||||| VUE ||||||||||||||||||||||||||||
-//---------------------------------------------------------------------------
-
-//---------------------------------------------------------------------------
-// INIZIALIZZO LE FUNZIONI: SCORRI VERSO DESTRA
-//---------------------------------------------------------------------------
-
-// function scorriVersoDx(lastIndex) {
-//   console.log(fotoElements[indiceFotoAttuale]);
-//   fotoElements[indiceFotoAttuale].classList.remove("selected");
-
-//   if (indiceFotoAttuale < lastIndex) {
-//     indiceFotoAttuale += 1;
-//   } else {
-//     indiceFotoAttuale = 0;
-//   }
-
-//   console.log(fotoElements[indiceFotoAttuale]);
-//   fotoElements[indiceFotoAttuale].classList.add("selected");
-// }
-
-//---------------------------------------------------------------------------
-// INIZIALIZZO LE FUNZIONI: SCORRI VERSO SINISTRA
-//---------------------------------------------------------------------------
-
-// scorriVersoSn();
-
-// function scorriVersoSn() {
-//   // console.log(fotoElements[indiceFotoAttuale]);
-//   fotoElements[indiceFotoAttuale].classList.remove("selected");
-
-//   if (indiceFotoAttuale > 0) {
-//     indiceFotoAttuale--;
-//   } else {
-//     indiceFotoAttuale = fotoElements.length - 1;
-//   }
-
-//   console.log(fotoElements[indiceFotoAttuale]);
-//   fotoElements[indiceFotoAttuale].classList.add("selected");
-// }
